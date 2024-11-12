@@ -1,14 +1,14 @@
-"use client"
-import React from "react"
+import React from "react";
+import Login from "./Login/page";
 
 
 
 function Home(){
   return(
     <div>
-      <p>Task Manager </p>
+      <Login/>
     </div>
   )
 }
 
-export default Home
+export default Home;
