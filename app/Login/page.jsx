@@ -11,7 +11,7 @@ function Login() {
       <div className="lg:w-1/2 w-full relative flex-shrink-0 h-50 lg:h-cover">
         <Image
           src="/images/Focused Tech Professional.jpg"
-          alt="Tech Professional"
+          alt=" "
           layout="fill"
           objectFit="cover"
           className="rounded-b-lg lg:rounded-none"
@@ -22,7 +22,7 @@ function Login() {
       </div>
 
     
-      <div className="lg:w-1/2 w-full flex items-center justify-center bg-gray-50 px-6 py-10 lg:py-20">
+      <div className="lg:w-1/2 w-full flex items-center justify-center bg-gray-50 px-6 py-40 lg:py-20">
         <div className="max-w-md w-full p-8">
         
           <p className="text-2xl font-bold text-center mb-2">Welcome Back!</p>
