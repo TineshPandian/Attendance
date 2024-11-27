@@ -1,4 +1,4 @@
-import ApiService from "./Api.service"; // Adjust the path as necessary
+import ApiService from "./Api.service"; 
 
 export const sendOtpRequest = async (email) => {
   try {
