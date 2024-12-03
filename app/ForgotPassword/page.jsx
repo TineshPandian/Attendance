@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import { sendOtpRequest } from "../../Service/Authentication.service";
-import theme from "../theme"; // Import the theme
+import theme from "../theme";
 
 const ForgotPasswordPage = () => {
   const [email, setEmail] = useState("");
@@ -28,7 +28,7 @@ const ForgotPasswordPage = () => {
 
   return (
     <div
-      className="min-h-screen grid grid-cols-1 p-6 lg:grid-cols-2 overflow-hidden"
+      className="flex flex-wrap lg:flex-nowrap min-h-screen p-6"
       style={{
         fontFamily: theme.fontFamily,
         backgroundColor: theme.colors.background,
@@ -36,28 +36,26 @@ const ForgotPasswordPage = () => {
     >
       {/* Left Image Section */}
       <div
-        className="relative w-full h-screen bg-cover bg-center rounded-lg"
-        style={{ backgroundImage: "url(/images/forgotpassword_1.jpg)" }}
+        className="w-full lg:w-1/2 h-72 rounded-lg lg:h-screen bg-cover bg-center flex items-center justify-center"
+        style={{
+          backgroundImage: "url(/images/forgotpassword_1.jpg)",
+        }}
       >
-        {/* Logo */}
-        <div className="absolute top-4 left-4">
-          <img
-            src="/path-to-your-logo.png" // Replace with your logo path
-            alt="Logo"
-            className="h-10"
-          />
-        </div>
+       <img
+          src="/images/manvianlogo.png"
+          alt="Logo"
+          className="absolute top-10 left-10 h-8"
+        />
       </div>
 
       {/* Right Form Section */}
       <div
-        className="flex flex-col justify-center items-center px-8 lg:px-16 py-10"
+        className="w-full lg:w-1/2 flex flex-col justify-center items-center px-6 py-12"
         style={{
           maxWidth: "600px",
           margin: "0 auto",
         }}
       >
-        {/* Heading */}
         <div className="text-center w-full">
           <h2
             className="text-xl lg:text-2xl font-bold mb-4"
@@ -65,15 +63,12 @@ const ForgotPasswordPage = () => {
           >
             Forgot Your Password?
           </h2>
-          <p
-            className="text-sm lg:text-sm mb-6 text-zinc-500"
-          >
+          <p className="text-sm lg:text-sm mb-6 text-zinc-500">
             Enter your registered email address, and we’ll send you a one-time
             password (OTP) to reset your password.
           </p>
         </div>
 
-        {/* Form */}
         <form onSubmit={handleSubmit} className="w-full mt-5">
           <div className="mb-4">
             <label
@@ -89,14 +84,14 @@ const ForgotPasswordPage = () => {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               required
-              className="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-400 text-sm"
+              className="w-full px-4 py-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-400 text-sm"
               placeholder="Enter your email"
               style={{ fontFamily: theme.fontFamily }}
             />
           </div>
           <button
             type="submit"
-            className="w-full py-2 rounded text-white text-sm "
+            className="w-full py-3 mt-6 rounded text-white text-sm"
             style={{
               backgroundColor: theme.colors.button,
               fontFamily: theme.fontFamily,
@@ -106,7 +101,6 @@ const ForgotPasswordPage = () => {
           </button>
         </form>
 
-        {/* Messages */}
         {message && (
           <p
             className="mt-4 text-center text-sm font-medium"
@@ -124,19 +118,17 @@ const ForgotPasswordPage = () => {
           </p>
         )}
 
-        {/* Back to Login */}
-        <div className="mt-4 text-center">
+        <div className="mt-8 text-center">
           <a
             href="/login"
             className="text-sm font-medium"
-            style={{ color: theme.colors.link }}
+            style={{ color: theme.colors.heading }}
           >
             ← Back to log in
           </a>
         </div>
 
-        {/* Footer Links */}
-        <div className="mt-6 text-center text-xs text-gray-500">
+        <div className="mt-24 text-center text-xs text-gray-500">
           <p>
             <a
               href="/privacy-policy"
