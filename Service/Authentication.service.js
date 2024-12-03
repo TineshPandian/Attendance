@@ -1,5 +1,6 @@
 
-import ApiService from "./Api.service"; 
+import ApiService from "./Api.service";
+
 
 export const sendOtpRequest = async (email) => {
   try {
