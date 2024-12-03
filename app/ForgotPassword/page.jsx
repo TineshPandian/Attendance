@@ -2,7 +2,8 @@
 
 import React, { useState } from "react";
 import { sendOtpRequest } from "../../Service/Authentication.service";
-import theme from "../theme";
+import theme from "../theme"; 
+
 
 const ForgotPasswordPage = () => {
   const [email, setEmail] = useState("");
@@ -120,7 +121,7 @@ const ForgotPasswordPage = () => {
 
         <div className="mt-8 text-center">
           <a
-            href="/login"
+            href="/Login"
             className="text-sm font-medium"
             style={{ color: theme.colors.heading }}
           >
