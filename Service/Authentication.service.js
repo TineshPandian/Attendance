@@ -47,6 +47,20 @@ export const changePasswordRequest = async (email, otp, newPassword) => {
   }
 };
 
-export 
+export const sendLoginRequest = async (email, password) => {
+  try {
+    const data = { email, password }; 
+    const response = await ApiService.ApiCall({
+      url: '/auth/login', 
+      method: 'POST',   
+      data,               
+    });
+    return response; 
+  } catch (error) {
+    console.error('Error in login:', error);
+  
+    throw new Error(error.response?.data?.message || 'Failed to login. Please try again.');
+  }
+};
 
 
